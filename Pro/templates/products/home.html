@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>WELCOME TO MY HOMEPAGE....</h1>
+{% for item in product %}
+
+<p>{{ item }}
+{% for img in item.productimage_set.all %}
+{{ img.image }}
+{% endfor %}
+</p>
+{% endfor %}
+
+{% endblock %}
