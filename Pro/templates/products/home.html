@@ -5,7 +5,8 @@
 
 <p>{{ item }}
 {% for img in item.productimage_set.all %}
-{{ img.image }}
+<img src="{{ MEDIA_ROOT }}{{ img.image }}" alt="">
+{{ MEDIA_URL }}{{ img.image }}
 {% endfor %}
 </p>
 {% endfor %}
